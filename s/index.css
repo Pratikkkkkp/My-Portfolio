@@ -1,181 +1,199 @@
-h1{
-    font-size: 80px;
-    text-align: left;
-    font-weight: lighter;
+h1 {
+  font-size: 80px;
+  text-align: left;
+  font-weight: lighter;
 }
 
-h3{
-    font-size: 40px;
-    text-align: left;
-    font-weight: lighter;
+h3 {
+  font-size: 40px;
+  text-align: left;
+  font-weight: lighter;
 }
 
-h4{
-    font-size: 16px;
-    font-weight: lighter;
+h4 {
+  font-size: 16px;
+  font-weight: lighter;
 }
 
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
 /* Float four columns side by side */
 .column {
-    float: left;
-    width: 25%;
-    padding: 8px 8px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: white;
-    color: black;
-  }
+  float: left;
+  width: 25%;
+  padding: 8px 8px;
+}
 
-  /*.card:hover {
-    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
-  }*/
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
 
- /* card image */
-  .cimg {
-    height: 100px;
-    width: 100px;
-    align-items: center;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.card:hover {
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* card image */
+.cimg {
+  height: 100px;
+  width: 100px;
+  align-items: center;
+}
 
 /*Container layout*/
 
-  .containerl {
-    padding: 24px;
-  }
+.containerl {
+  padding: 24px;
+}
 
-  .cgrey{
-    background-color:#f1f1f1
-  }
-  
-  .rowl:after {
-    content: "";
-    display: table;
-    clear: both
-  }
-  
-  .columnl-70 {
-    float: left;
-    width: 70%;
-    padding: 20px;
-  }
-  
-  .columnl-30 {
-    float: left;
-    width: 30%;
-    padding: 20px;
-  }
+.cgrey {
+  background-color: #f1f1f1;
+}
 
-  /*about column*/
-  .columnl-i1 {
-    float: left;
-    width: 30%;
-    padding: 20px;
-  }
+.rowl:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+.columnl-70 {
+  float: left;
+  width: 70%;
+  padding: 20px;
+}
+
+.columnl-30 {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+/*about column*/
+.columnl-i1 {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+.columnl-i2 {
+  float: left;
+  width: 70%;
+  padding: 20px;
+}
+
+.largel-font {
+  font-size: 48px;
+}
+
+.xlargel-font {
+  font-size: 64px;
+}
+
+.buttonl {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttonl a {
+  color: white;
+  text-decoration: none; /* Remove underline from link */
+  font-weight: bold;
+}
+
+.buttonl:hover {
+  background-color: #45a049;
+
+  transform: translateY(-4px);
+}
+.buttonl:active {
+  background-color: #388e3c; /* Even darker green when clicked */
+  transform: translateY(2px); /* Slightly push the button down */
+}
+.imgi {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.imgj {
+  /*about image*/
+  display: block;
+  max-width: 100%;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*responsive columns*/
+@media screen and (max-width: 1000px) {
+  .columnl-70,
+  .columnl-30,
+  .columnl-i1,
   .columnl-i2 {
-    float: left;
-    width: 70%;
-    padding: 20px;
-  }
-  
-  .largel-font {
-    font-size: 48px;
-  }
-  
-  .xlargel-font {
-    font-size: 64px
-  }
-  
-  .buttonl {
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .buttonl:hover{
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .imgi {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .imgj { /*about image*/
-    display: block;
-    max-width: 100%;
-    /*box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);*/
-  }
-  
-  /*responsive columns*/
-  @media screen and (max-width: 1000px) {
-    .columnl-70,
-    .columnl-30,
-    .columnl-i1,
-    .columnl-i2 {
-      width: 100%;
-      text-align: center;
-    }
-    .imgi, .imgj {
-      margin: auto;
-    }
-  }
-
-  a:link {
-    text-decoration: none;
-  } 
-
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 10px;
     width: 100%;
+    text-align: center;
   }
+  .imgi,
+  .imgj {
+    margin: auto;
+  }
+}
 
- .padd{
-    padding: 0px 40px 0px 40px
- } 
+a:link {
+  text-decoration: none;
+}
 
- @media screen and (max-width: 800px) {
-  .padd{
-    padding: 0px 0px 0px 0px
- } 
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  width: 100%;
+}
+
+.padd {
+  padding: 0px 40px 0px 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .padd {
+    padding: 0px 0px 0px 0px;
+  }
 }
 
 /*dark mode elements*/
@@ -203,10 +221,9 @@ div.gallery:hover {
 
 .img-thumbnail {
   min-height: 100px;
-   height: 240px;
-   border: 6px solid white;
+  height: 240px;
+  border: 6px solid white;
 }
-  
 
 div.desc {
   padding: 15px;
@@ -256,12 +273,13 @@ div.desc {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.activee, .accordion:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+.activee,
+.accordion:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -278,12 +296,11 @@ div.desc {
   transition: max-height 0.2s ease-out;
 }
 
-
 .dark,
 .dark * {
-    background-color: #222831;
-    color: white;
-    border-color: white;
+  background-color: #222831;
+  color: white;
+  border-color: white;
 }
 
 ul {
