@@ -1,97 +1,109 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  /* Header*/
-  .header {
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    background: white;
-  }
-  
- 
-  /* Main column */
-  .column {   
-    width: 100%;
-  }
+/* Header*/
+.header {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+}
 
-  .card {
-   padding: 20px;
-   margin-top: 20px;
-   border: 1px solid #555;
-   box-shadow: 2px 2px 2px gray;
-  }
-  
-  /* Fake image */
-  .fakeimg {
-    background-color: #aaa;
+/* Main column */
+.column {
+  width: 100%;
+}
+
+.card {
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #555;
+  box-shadow: 2px 2px 2px gray;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bulleted-text {
+  list-style-type: disc;
+  margin-left: 0px;
+}
+.bullet {
+  display: inline-block;
+  margin-right: 10px; /* Space between the bullet and the text */
+  color: #333; /* Bullet color */
+}
+/* Footer */
+.footer {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  /*min-height: 100%;  Make sure the content takes at least the full height of the page */
+  font-size: 10px;
+  width: 100%;
+}
+/*.content {
+  padding-bottom: 50px;
+}*/
+@media screen and (max-width: 800px) {
+  .column {
     width: 100%;
-    padding: 20px;
+    padding: 0;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 10px;
-    width: 100%;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide*/
-  @media screen and (max-width: 800px) {
-    .column{   
-      width: 100%;
-      padding: 0;
-    }
-  }
+}
 
 /* Float four image columns side by side */
 .columnc {
-float: left;
-width: 25%;
-padding: 0 10px;
-margin-bottom: 2%;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-bottom: 2%;
 }
 
 /* Remove extra left and right margins, due to padding */
-.rowc {margin: 0 -5px;}
+.rowc {
+  margin: 0 -5px;
+}
 
 /* Clear floats after the image columns */
 .rowc:after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Responsive image columns */
 @media screen and (max-width: 1030px) {
-.columnc {
-width: 50%;
-display: block;
-margin-bottom: 20px;
-}
+  .columnc {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .columnc {
-  width: 100%;
-  display: block;
-  margin-bottom: 20px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  }
+}
 
 /* Style the image cards */
 .cardc {
-padding: 0px;
+  padding: 0px;
 }
 
 /*Show image of any dimension in uniform size as thumbnail*/
@@ -107,9 +119,9 @@ img {
 
 .img-thumbnail {
   min-height: 100px;
-   height: 240px;
-   border: 6px solid white;
-   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  height: 240px;
+  border: 6px solid white;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .img-thumbnail:hover {
@@ -118,18 +130,17 @@ img {
 
 /*link*/
 a:link {
-    text-decoration: none;
-  } 
+  text-decoration: none;
+}
 
- 
-.padd{
-    padding: 0px 40px 0px 40px;
- } 
+.padd {
+  padding: 0px 40px 0px 40px;
+}
 
- @media screen and (max-width: 800px) {
-  .padd{
+@media screen and (max-width: 800px) {
+  .padd {
     padding: 0px 0px 0px 0px;
- } 
+  }
 }
 
 .switch {
@@ -144,9 +155,9 @@ a:link {
   font-size: 1rem;
 }
 
-  .dark,
-  .dark * {
-      background-color: #222831;
-      color: white;
-      border-color: white;
-  }  
+.dark,
+.dark * {
+  background-color: #222831;
+  color: white;
+  border-color: white;
+}
