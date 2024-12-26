@@ -233,6 +233,40 @@ body.dark .contact-form textarea {
 a:link {
   text-decoration: none;
 }
+/* View All Projects Button */
+.view-all-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #5184bb;
+  border: 2px solid #2e3d29;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #3276be;
+  transform: scale(1.05);
+}
+
+.view-all-btn:active {
+  background-color: #003f7f;
+  transform: scale(0.95);
+}
+
+/* Centering the Button */
+.view-all-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
 
 /* Footer */
 .footer {
