@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-   <head>
+  <head>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -9,182 +9,297 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <title>&#127891; Minimal Portfolio</title>
-      <link rel="stylesheet" href="s/style.css">
-      <link rel="stylesheet" href="s/pro.css">
+    <title>&#127891; Minimal Portfolio</title>
+    <link rel="stylesheet" href="s/style.css" />
+    <link rel="stylesheet" href="s/pro.css" />
 
-      <script src="j/jq.js"></script>
-      <script src="j/cookie.js"></script><!--dark mode script's cookie-->
-      <script src="j/drk.js"></script><!--dark mode scripts-->
+    <script src="j/jq.js"></script>
+    <script src="j/cookie.js"></script>
+    <!--dark mode script's cookie-->
+    <script src="j/drk.js"></script>
+    <!--dark mode scripts-->
+  </head>
+  <body>
+    <input
+      id="navbar-indicator"
+      class="navbar-collapse"
+      type="checkbox"
+      checked
+    />
+    <nav class="navbar">
+      <a class="navbar-brand nb" href="index.html"> Minimal Portfolio </a>
 
-   </head>
-   <body>
-      <input id="navbar-indicator" class="navbar-collapse" type="checkbox" checked>
-      <nav class="navbar">
-         <a class="navbar-brand nb" href="index.html">
-          Minimal Portfolio
-         </a>
+      <div class="navbar-right">
+        <a class="nav-link nb" href="index.html#about">About</a
+        ><!--link navigation for specific points in a page-->
+        <a class="nav-link nb" href="index.html#skills">Skills</a>
+        <a class="nav-link nb" href="index.html#exp">Experiences</a>
+        <a class="nav-link nb active" href="index.html#proj">Projects</a>
+        <a class="nav-link nb switch"><span class="inner-switch">Dark</span></a>
+      </div>
 
-         <div class="navbar-right">
-          <a class="nav-link nb" href="index.html#about">About</a><!--link navigation for specific points in a page-->
-          <a class="nav-link nb" href="index.html#skills">Skills</a>
-          <a class="nav-link nb" href="index.html#exp">Experiences</a>
-          <a class="nav-link nb active" href="index.html#proj">Projects</a>
-          <a class="nav-link nb switch"><span class="inner-switch">Dark</span></a>
-         </div>
+      <label class="navbar-toggler" for="navbar-indicator"
+        ><!--mobile menu-->
+        Menu
+      </label>
+    </nav>
 
-         <label class="navbar-toggler" for="navbar-indicator"><!--mobile menu-->
-            Menu
-         </label>
-      </nav>
-      
-<br><br><br><br>
+    <br /><br /><br /><br />
 
-<div class="padd"><!--Full page padding-->
-<div style="padding:10px 10px 10px 10px"> 
- 
-<div class="header">
-   <h2 style="font-size:36px; text-shadow: 2px 2px 2px gray; font-weight: lighter;">&#128187; My Projects <span style="font-size: 14px;"></span></h2>
- </div>
+    <div class="padd">
+      <!--Full page padding-->
+      <div style="padding: 10px 10px 10px 10px">
+        <div class="header">
+          <h2
+            style="
+              font-size: 36px;
+              text-shadow: 2px 2px 2px gray;
+              font-weight: lighter;
+            "
+          >
+            &#128187; My Projects <span style="font-size: 14px"></span>
+          </h2>
+        </div>
 
- 
- <div class="row">
-   <div class="column">
-     
-    <a name="1"></a><!--link added for specific target in page-->
-    <div class="card">
-      <h2>Advanced-React-To-Do-Application-with-API-Integration</h2>
-      <h5>HTML, CSS, w3.cc, JS [Nov 23, 2024]</h5>
+        <div class="row">
+          <div class="column">
+            <a name="1"></a
+            ><!--link added for specific target in page-->
+            <div class="card">
+              <h2>Advanced-React-To-Do-Application-with-API-Integration</h2>
+              <h5>HTML, CSS, JS, React.js, Axios [Nov 23, 2024]</h5>
+              <br />
+              <div class="rowc" style="padding: 10px 10px 10px 10px">
+                <div class="columnc">
+                  <div class="cardc">
+                    <a target="_blank" href="f/R1.jpg">
+                      <img
+                        src="f/R1.jpg"
+                        style="width: 100%"
+                        class="img-thumbnail"
+                      />
+                    </a>
+                  </div>
+                </div>
 
-      <!--<div class="rowc" style="padding:10px 10px 10px 10px;">
+                <div class="columnc">
+                  <div class="cardc">
+                    <a target="_blank" href="f/R2.png">
+                      <img
+                        src="f/R2.png"
+                        style="width: 100%"
+                        class="img-thumbnail"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="columnc">
+                  <div class="cardc">
+                    <a target="_blank" href="f/R3.jpg">
+                      <img
+                        src="f/R3.jpg"
+                        style="width: 100%"
+                        class="img-thumbnail"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- <div class="columnc">
+          <div class="cardc">
+            <a target="_blank" href="f/i.jpg">
+              <img src="f/R2.png" style="width:100%" class="img-thumbnail">
+            </a>
+          </div>
+        </div>-->
+              </div>
+              <br />
+
+              <p class="bulleted-text">
+                <span class="bullet">•</span>Enabled CRUD operations for tasks
+                and implemented features like task filters and due dates.
+                <br />
+                <span class="bullet">•</span>Implemented advanced features such
+                as task categorization, due dates, and real-time search
+                functionality for enhanced user experience.
+                <br />
+                <span class="bullet">•</span>Used Axios for API requests and
+                optimized performance with lazy loading. <br />
+              </p>
+              <br />
+              <a
+                href="https://github.com/Pratikkkkkp/Advanced-React-To-Do-Application-with-API-Integration"
+                target="_blank"
+              >
+                <i
+                  class="fab fa-github"
+                  style="color: rgb(177, 35, 177); font-size: 24px"
+                ></i
+                ><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a
+              >
+            </div>
+          </div>
+
+          <a name="2"></a>
+          <div class="card">
+            <h2>Android-Attendance-App</h2>
+            <h5>Android Studio, Java, xml [Apr 19, 2023]</h5>
+            <br />
+            <div class="rowc" style="padding: 10px 10px 10px 10px">
+              <div class="columnc">
+                <div class="cardc">
+                  <a target="_blank" href="f/A3.jpg">
+                    <img
+                      src="f/A3.jpg"
+                      style="width: 100%"
+                      class="img-thumbnail"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="columnc">
+                <div class="cardc">
+                  <a target="_blank" href="f/A2.jpg">
+                    <img
+                      src="f/A2.jpg"
+                      style="width: 100%"
+                      class="img-thumbnail"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="columnc">
+                <div class="cardc">
+                  <a target="_blank" href="f/A1.jpg">
+                    <img
+                      src="f/A1.jpg"
+                      style="width: 100%"
+                      class="img-thumbnail"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <!--<div class="columnc">
+          <div class="cardc">
+            <a target="_blank" href="f/i.jpg">
+              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
+            </a>
+          </div>
+        </div>-->
+            </div>
+            <br />
+            <p class="bulleted-text">
+              <span class="bullet">•</span>Developed an Android app with Java
+              for managing student attendance, featuring Admin and Teacher
+              modules.
+              <br />
+              <span class="bullet">•</span>Admin: Added/viewed students,
+              teachers, and tracked attendance.
+              <br />
+              <span class="bullet">•</span>Teacher: Took class-wise attendance,
+              edited records, and saved subject notes.
+              <br />
+            </p>
+            <br />
+            <a
+              href="https://github.com/Pratikkkkkp/Android-Attendance-App"
+              target="_blank"
+            >
+              <i
+                class="fab fa-github"
+                style="color: rgb(177, 35, 177); font-size: 24px"
+              ></i
+              ><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a
+            >
+          </div>
+        </div>
+
+        <a name="3"></a>
+        <div class="card">
+          <h2>
+            Multi-Container-Application-Deployment-with-Docker-Compose-and-Kubernetes
+          </h2>
+          <h5>Docker, Terraform, Kubernetes (K8s), Node.js [Dec 1, 2024]</h5>
+          <br />
+          <div class="rowc" style="padding: 10px 10px 10px 10px">
+            <div class="columnc">
+              <div class="cardc">
+                <a target="_blank" href="f/D1.avif">
+                  <img
+                    src="f/D1.avif"
+                    style="width: 100%"
+                    class="img-thumbnail"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="columnc">
+              <div class="cardc">
+                <a target="_blank" href="f/D2.avif">
+                  <img
+                    src="f/D2.avif"
+                    style="width: 100%"
+                    class="img-thumbnail"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="columnc">
+              <div class="cardc">
+                <a target="_blank" href="f/D3.avif">
+                  <img
+                    src="f/D3.avif"
+                    style="width: 100%"
+                    class="img-thumbnail"
+                  />
+                </a>
+              </div>
+            </div>
+          <!--<div class="rowc" style="padding:10px 10px 10px 10px">
         <div class="columnc">
           <div class="cardc">
             <a target="_blank" href="f/i.jpg">
               <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
             </a>
           </div>
+        </div>-->
         </div>
-
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-      </div>--><br>
-      <p class="bulleted-text">
-        <span class="bullet">•</span>Enabled CRUD operations for tasks and implemented features like task filters and due dates.
-        <br>
-        <span class="bullet">•</span>Implemented advanced features such as task categorization, due dates, and real-time search functionality for enhanced user experience. 
-        <br>
-        <span class="bullet">•</span>Used Axios for API requests and optimized performance with lazy loading.
-        <br></p>
-        <br>
-      <a href="https://github.com/Pratikkkkkp/Advanced-React-To-Do-Application-with-API-Integration" target="_blank">
-        <i class="fab fa-github" style="color: rgb(177, 35, 177); font-size: 24px"></i><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a>
-    </div>
-   </div>
- 
-   <a name="2"></a>
-     <div class="card">
-       <h2>Android-Attendance-App</h2>
-       <h5>HTML, CSS JS, W3.css, Bootstrap [Oct 18, 2019]</h5>
-       <!--<div class="rowc" style="padding:10px 10px 10px 10px">
-         <div class="columnc">
-           <div class="cardc">
-             <a target="_blank" href="f/i.jpg">
-               <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-             </a>
-           </div>
-         </div>
-         
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-      </div> -->
-      <br>
-       <p class="bulleted-text">
-        <span class="bullet">•</span>Developed an Android app with Java for managing student attendance, featuring Admin and Teacher modules.
-        <br>
-        <span class="bullet">•</span>Admin: Added/viewed students, teachers, and tracked attendance. 
-        <br>
-        <span class="bullet">•</span>Teacher: Took class-wise attendance, edited records, and saved subject notes.
-        <br> 
+        <br />
+        <p class="bulleted-text">
+          <span class="bullet">•</span>Developed a multi-container application
+          using Docker and Docker Compose to manage service dependencies.
+          <br />
+          <span class="bullet">•</span>Deployed the application on Kubernetes
+          for orchestration, ensuring scalability and high availability.
+          <br />
+          <span class="bullet">•</span>Automated container build and deployment
+          pipelines using Dockerfiles and Kubernetes YAML files.
+          <br />
         </p>
-        <br>
-       <a href="https://github.com/Pratikkkkkp/Android-Attendance-App" target="_blank">
-        <i class="fab fa-github" style="color: rgb(177, 35, 177); font-size: 24px"></i><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a>
-     </div>
+        <br />
+        <a
+          href="https://github.com/Pratikkkkkp/Multi-Container-Application-Deployment-with-Docker-Compose-and-Kubernetes"
+          target="_blank"
+        >
+          <i
+            class="fab fa-github"
+            style="color: rgb(177, 35, 177); font-size: 24px"
+          ></i
+          ><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a
+        >
+      </div>
     </div>
-      
-    <a name="3"></a>
-     <div class="card">
-       <h2>Multi-Container-Application-Deployment-with-Docker-Compose-and-Kubernetes</h2>
-       <h5>Adobe XD [Feb 5, 2020]</h5>
-       <!--<div class="rowc" style="padding:10px 10px 10px 10px">
-        <div class="columnc">
-          <div class="cardc">
-            <a target="_blank" href="f/i.jpg">
-              <img src="f/i.jpg" style="width:100%" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-      </div>--><br>
-       <p class="bulleted-text">
-        <span class="bullet">•</span>Developed a multi-container application using Docker and Docker Compose to manage service dependencies.
-        <br>
-        <span class="bullet">•</span>Deployed the application on Kubernetes for orchestration, ensuring scalability and high availability. 
-        <br>
-        <span class="bullet">•</span>Automated container build and deployment pipelines using Dockerfiles and Kubernetes YAML files. 
-        <br>  
-        </p>
-        <br>
-        <a href="https://github.com/Pratikkkkkp/Multi-Container-Application-Deployment-with-Docker-Compose-and-Kubernetes" target="_blank">
-            <i class="fab fa-github" style="color: rgb(177, 35, 177); font-size: 24px"></i><span style="color: rgb(177, 35, 177)"> GitHub Link</span></a>
-     </div>
-  
- 
-     <!--<a name="4"></a>
+
+    <!--<a name="4"></a>
    <div class="card">
     <h2>Project Name</h2>
     <h5>Adobe XD [Mar 27, 2020]</h5>
@@ -218,12 +333,18 @@
 
 </div>-->
 
- <div class="footer">
-   <h2>Visit My <a href="https://linkedin.com/in/pratik-pal-207441199/"
-    target="_blank"><span style="color: royalblue;">Linkedin</span></a> &
-    <a href="https://github.com/pratikkkkkp" target="_blank"><span style="color: rgb(177, 35, 177);">Github</span></a> Page.</h2>
- </div>
-
-
-   </body>
+    <div class="footer">
+      <h2>
+        Visit My
+        <a href="https://linkedin.com/in/pratik-pal-207441199/" target="_blank"
+          ><span style="color: royalblue">Linkedin</span></a
+        >
+        &
+        <a href="https://github.com/pratikkkkkp" target="_blank"
+          ><span style="color: rgb(177, 35, 177)">Github</span></a
+        >
+        Page.
+      </h2>
+    </div>
+  </body>
 </html>
