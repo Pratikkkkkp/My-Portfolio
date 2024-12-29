@@ -43,4 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Scroll progress bar functionality
+  const scrollProgress = document.getElementById("scroll-progress");
+
+  if (scrollProgress) {
+    document.addEventListener("scroll", function () {
+      const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const progress = (scrollPosition / scrollHeight) * 100;
+      scrollProgress.style.width = progress + "%";
+    });
+  }
 });

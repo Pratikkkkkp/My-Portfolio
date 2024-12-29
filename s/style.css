@@ -6,6 +6,65 @@
   font-family: "Courier New", monospace;
 }
 
+/* Scroll Progress Bar Styling */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%; /* Initial width is 0 */
+  height: 7px;
+  background: linear-gradient(90deg, #00bfae, #ff9800); /* Gradient effect */
+  z-index: 1000;
+  transition: width 0.2s ease-out, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: glow 1.5s infinite ease-in-out;
+}
+
+/* Pulse effect for the progress bar 
+#scroll-progress:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%; 
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #470f0f;
+  border-radius: 50%;
+  animation: pulse 1s infinite ease-in-out;
+}
+*/
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scaleX(1); /* Start at normal size */
+  }
+  50% {
+    transform: scaleX(1.1); /* Slightly expand the width */
+  }
+  100% {
+    transform: scaleX(1); /* Return to normal size */
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 191, 174, 0.5); /* Initial soft glow */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 191, 174, 1), 0 0 30px rgba(255, 152, 0, 0.8); /* Stronger glow with orange */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 191, 174, 0.5); /* Return to soft glow */
+  }
+}
+
+/* Dark mode styling */
+.dark {
+  background-color: #222831; /* Dark mode background */
+  color: white; /* Text color */
+}
+
 /* Navbar Base Styling */
 .navbar {
   position: relative;
