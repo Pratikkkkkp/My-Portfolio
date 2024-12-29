@@ -13,11 +13,17 @@
   left: 0;
   width: 0%; /* Initial width is 0 */
   height: 7px;
-  background: linear-gradient(90deg, #00bfae, #ff9800); /* Gradient effect */
+  background: linear-gradient(
+    90deg,
+    #00ff7f,
+    #00d2ff,
+    #ff00ff
+  ); /* Electric green, cyan, and neon pink gradient */
   z-index: 1000;
   transition: width 0.2s ease-out, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  animation: glow 1.5s infinite ease-in-out;
+  animation: neonPulse 1.5s ease-in-out infinite alternate,
+    glowMovement 2s ease-in-out infinite; /* Neon pulse and movement */
 }
 
 /* Pulse effect for the progress bar 
@@ -57,6 +63,55 @@
   100% {
     box-shadow: 0 0 10px rgba(0, 191, 174, 0.5); /* Return to soft glow */
   }
+}
+/* Slide effect to move the bar */
+@keyframes slide {
+  0% {
+    transform: scaleX(1) translateX(-5px); /* Start slightly left */
+  }
+  50% {
+    transform: scaleX(1) translateX(5px); /* Move slightly to the right */
+  }
+  100% {
+    transform: scaleX(1) translateX(-5px); /* Return slightly left */
+  }
+}
+/* Neon Pulse Animation */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 191, 174, 0.8), 0 0 15px rgba(0, 191, 174, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 191, 174, 1), 0 0 30px rgba(255, 152, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 191, 174, 0.8), 0 0 15px rgba(0, 191, 174, 0.5);
+  }
+}
+
+/* Glow Movement */
+@keyframes glowMovement {
+  0% {
+    transform: translateX(-10px); /* Start slightly off-screen */
+  }
+  50% {
+    transform: translateX(10px); /* Move to the right */
+  }
+  100% {
+    transform: translateX(-10px); /* Move back to the left */
+  }
+}
+/* Hover Effect - Amplified glow */
+#scroll-progress:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 127, 1), 0 0 50px rgba(0, 210, 255, 1); /* Stronger glow */
+  background: linear-gradient(
+    90deg,
+    #ff00ff,
+    #00d2ff,
+    #00ff7f
+  ); /* Reversed gradient on hover */
+  animation: neonPulse 0.7s ease-in-out infinite alternate,
+    glowMovement 1s ease-in-out infinite;
 }
 
 /* Dark mode styling */
