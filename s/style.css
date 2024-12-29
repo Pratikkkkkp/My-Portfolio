@@ -1,115 +1,160 @@
-
+/* Global Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Courier New",monospace;
- }
- 
- /* * * * * * * * * * * * * * * * * * * * * * * * * * *
-  * Styling navigation bar for large screen devices
-  */
- .nb{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+/* Navbar Base Styling */
+.navbar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.959);
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Left and Right Navbar Sections */
+.navbar-left,
+.navbar-right {
+  display: inline-block;
+  margin-right: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Navbar Link Styling */
+.navbar .nav-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+/* Active Link State */
+.navbar .nav-link.active {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  font-weight: bold;
+  color: #00bfae; /* Teal color for active link */
+  border-bottom: 3px solid #00bfae; /* Bold bottom border */
+}
+
+/* Hover and Active Link Hover States */
+.navbar .nav-link:hover,
+.navbar .nav-link.active:hover {
+  background-color: rgba(0, 191, 174, 0.3); /* Light teal background on hover */
+  color: #00848d; /* Teal text color on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 191, 174, 0.2); /* Subtle box-shadow on hover */
+}
+
+/* Navbar Toggler (Hamburger Menu) for Mobile */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+/* Navbar Collapse (Mobile) */
+.navbar-collapse {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color-light, white);
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.3s ease, overflow 0.3s ease;
+}
+
+.navbar-collapse.open {
+  display: flex;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 874px) {
+  .navbar-left,
+  .navbar-right {
+    display: block;
+  }
+
+  .navbar-right {
+    position: static;
+  }
+
+  .navbar .nav-link {
+    display: block;
+    padding: 15px;
+  }
+
+  .navbar-collapse {
+    display: flex;
+  }
+
+  .navbar-toggler {
     color: black;
- }
- .navbar {
-    position: relative; 
-    background: rgba(255, 255, 255, 0.959);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;/*to avoid overlapp of elements*/
- }
- 
- .navbar-left {
     display: inline-block;
-    margin-left: 15px;
- }
- 
- .navbar-right {
-    display: inline-block;
-    margin-right: 15px;
+    padding: 15px 25px;
     position: absolute;
     top: 0;
     right: 0;
- }
- 
- .navbar-brand,
- .navbar .nav-link {
-    text-decoration: none;
-    display: inline-block;
-    padding: 15px;
- }
-
- .navbar a.active {
-   text-shadow: 2px 2px 2px gray;
-   font-weight: bold;
+    cursor: pointer;
   }
- 
- .navbar-brand {
-    padding-left: 30px;
-    padding-right: 30px;
- 
- }
+}
 
- .navbar-brand:hover {
-   text-shadow: 2px 2px 2px gray;
-   font-weight: bold;
- }
- 
- .navbar .nav-link:hover {
-   text-shadow: 2px 2px 2px gray;
-   font-weight: bold;
- }
- 
- .navbar-collapse,
- .navbar-toggler {
-    display: none;
- }
- 
- /* * * * * * * * * * * * * * * * * * * * * * * * * * *
-  * For mobile devices
-  */
- 
- @media (max-width: 874px) {
-    .navbar-right,
-    .navbar-left {
-       display: block;
-    }
- 
-    .navbar-right {
-       position: static;
-    }
- 
-    .navbar .nav-link {
-       display: block;
-    }
-
-    .navbar a.active {
-        text-shadow: 2px 2px 2px gray;
-        font-weight: bold;
-      }
- 
-    .navbar-collapse:checked + .navbar {
-       max-height: 50px;
-       overflow: hidden;
-    }
- 
-    .navbar-toggler {
-       color: black;
-       display: inline-block;
-       padding: 15px 25px;
-       position: absolute;
-       top: 0;
-       right: 0;
-       cursor: pointer;
-    }
- } /* @media */
-
- 
+/* Dark Mode Styles */
 .dark,
 .dark * {
-    background-color: #222831;
-    color: white;
-    border-color: white;
+  background-color: #222831;
+  color: white;
+  border-color: white;
+}
+
+.dark .navbar {
+  background: rgba(34, 40, 49, 0.95); /* Dark navbar background */
+}
+
+.dark .navbar .nav-link {
+  color: white; /* Light text in dark mode */
+}
+
+.dark .navbar .nav-link.active {
+  color: #00bfae; /* Active link color in dark mode */
+  border-bottom: 3px solid #00bfae; /* Active link underline */
+}
+
+.dark .navbar .nav-link:hover {
+  background-color: rgba(
+    0,
+    191,
+    174,
+    0.2
+  ); /* Lighter hover background in dark mode */
+}
+
+.dark .navbar-toggler {
+  color: white; /* Hamburger icon color in dark mode */
+}
+
+/* Accessibility Enhancements */
+.nav-link:focus,
+.navbar-toggler:focus {
+  outline: 2px solid var(--primary-color, #00bfae); /* Outline for better focus visibility */
+}
+
+/* Custom properties for theme colors (Light & Dark modes) */
+:root {
+  --primary-color: #00bfae; /* Teal accent color */
+  --text-color-light: black;
+  --bg-color-light: white;
 }
