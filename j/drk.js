@@ -1,30 +1,37 @@
-$(document).ready(function(e) {  
-  // dark mode switch
-  var setTheme = function (theme) {
-    if (theme === 'dark') {
-    // dark
-    $( "body" ).removeClass("standard");
-    $( "body" ).addClass( "dark" );
-    $(".inner-switch").text("Light");
-    setCookie('Theme', 'dark', 30);
-    } else {
-    $("body").removeClass("dark");
-    $("body").addClass("standard");
-    $(".inner-switch").text("Dark");
-    setCookie('Theme', 'standard', 30);
+$(document).ready(function (e) {
+  // Function to set a cookie
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
     }
-    };
-    
-    currentTheme = getCookie('Theme');
-    setTheme(currentTheme);
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
 
-    $( ".inner-switch" ).on("click", function() {
-      if ($("body").hasClass("dark")) {
-      // standard
-      setTheme('standard');
-      } else {
-      // dark mode
-      setTheme('dark');
-      }
-    });
- });
+  // Function to set the theme
+  var setTheme = function (theme) {
+    if (theme === "dark") {
+      $("body").removeClass("standard").addClass("dark");
+      $(".inner-switch").text("Light");
+      setCookie("Theme", "dark", 30);
+    } else {
+      $("body").removeClass("dark").addClass("standard");
+      $(".inner-switch").text("Dark");
+      setCookie("Theme", "standard", 30);
+    }
+  };
+
+  // Force the theme to always be dark
+  setTheme("dark");
+
+  // Toggle theme on button click
+  $(".inner-switch").on("click", function () {
+    if ($("body").hasClass("dark")) {
+      setTheme("standard");
+    } else {
+      setTheme("dark");
+    }
+  });
+});

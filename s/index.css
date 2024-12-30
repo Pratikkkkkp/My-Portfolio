@@ -18,6 +18,28 @@ h4 {
 * {
   box-sizing: border-box;
 }
+.accordion {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion.active {
+  background-color: #ccc;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+}
 
 /* Float four columns side by side */
 .column {
