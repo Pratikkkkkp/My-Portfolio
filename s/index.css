@@ -164,11 +164,12 @@ h4 {
 .buttonl:hover {
   background-color: #222831;
   text-decoration: none;
-  transform: translateY(-4px);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 191, 174, 0.8), 0 0 30px rgba(0, 191, 174, 0.6);
 }
 .buttonl:active {
-  background-color: #478778; /* Even darker green when clicked */
-  transform: translateY(2px); /* Slightly push the button down */
+  background-color: #003f7f; /* Even darker green when clicked */
+  transform: scale(0.95); /* Slightly push the button down */
 }
 .imgi {
   display: block;
@@ -266,12 +267,14 @@ a:link {
   border: 2px solid #2e3d29;
   border-radius: 5px;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 .view-all-btn:hover {
-  background-color: #3276be;
+  background-color: #222831;
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 191, 174, 0.8), 0 0 30px rgba(0, 191, 174, 0.6);
 }
 
 .view-all-btn:active {
