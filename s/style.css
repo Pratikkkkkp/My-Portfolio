@@ -86,6 +86,7 @@
   top: 0;
   width: 100%;
   z-index: 1;
+  transition: max-height 0.3s ease-out;
 }
 
 /* Left and Right Navbar Sections */
@@ -126,32 +127,9 @@
 }
 
 /* Navbar Toggler (Hamburger Menu) for Mobile */
+.navbar-collapse,
 .navbar-toggler {
   display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-/* Navbar Collapse (Mobile) */
-.navbar-collapse {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background: var(--bg-color-light, white);
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: max-height 0.3s ease, overflow 0.3s ease;
-}
-
-.navbar-collapse.open {
-  display: flex;
 }
 
 /* Media Queries for Mobile Devices */
@@ -173,7 +151,10 @@
   .navbar-collapse {
     display: flex;
   }
-
+  .navbar-collapse:checked + .navbar {
+    max-height: 50px;
+    overflow: hidden;
+  }
   .navbar-toggler {
     color: black;
     display: inline-block;
