@@ -4,6 +4,13 @@ h1 {
   font-weight: lighter;
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
 }
+.neon-text {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px #00f,
+    0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+}
 
 h3 {
   font-size: 40px;
@@ -124,7 +131,7 @@ h4 {
 /*about column*/
 .columnl-i1 {
   float: left;
-  width: 30%;
+  width: 70%;
   padding: 20px;
 }
 
@@ -187,7 +194,8 @@ h4 {
   /*about image*/
   display: block;
   max-width: 100%;
-  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  border: 5px solid rgb(0, 255, 255); /* Neon border */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6); /* Neon glowing effect */
 }
 /* .contact-form {
   max-width: 600px;
