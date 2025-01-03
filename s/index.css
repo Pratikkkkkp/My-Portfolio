@@ -8,8 +8,8 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px #00f,
-    0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+  line-height: 1.4;
+  text-shadow: 0 0 5px rgb(0, 255, 255), 0 0 10px rgba(0, 255, 255, 0.3); /* Glowing effect */
 }
 
 h3 {
